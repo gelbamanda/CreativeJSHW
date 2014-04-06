@@ -1,10 +1,11 @@
+//Sketch Adapted for JS from:
 //Coloring Mondrian [9.13.17]
 //Arielle Hein & Amanda Gelb
 
-color yellowColor = color(255, 215, 0);
-color blueColor = color(0, 0, 102);
-color redColor = color(255, 0, 0);
-color blackColor= color(0, 0, 0);
+var yellowColor; 
+var blueColor;
+var redColor; 
+var blackColor;
 
 var rect5X= 745, rect5Y = 10, rect5Width = 45, rect5Height= 250; //rect 5 (YELLOW)
 var rect6X= 55, rect6Y = 40, rect6Width = 300, rect6Height= 60; //rect 6 (BLUE)
@@ -27,8 +28,15 @@ var rect33X=355, rect33Y=460, rect33Width=230, rect33Height=100; //rect 33 (BLAC
 
 function setup() {                          // **change** void setup() to function setup()
   createCanvas(800, 570);                 // **change** size() to createGrphics()
+  background(255);
   strokeWeight(8);                          // strokeWeight() is the same
-  stroke(355, 200);    
+  stroke(0,0,0);    
+  yellowColor = color(255, 215, 0);
+  blueColor = color(0, 0, 102);
+  redColor = color(255, 0, 0);
+  blackColor= color(0, 0, 0);
+
+
 
 //Composition is composed of rectangles, ones with color are defined by variables above
 rect(rect5X, rect5Y, rect5Width, rect5Height); //rect 5 (YELLOW)
@@ -68,10 +76,6 @@ rect(700, 340, 90, 120); //rect 30
 rect(10, 500, 180, 60); //rect 31
 rect(585, 460, 205, 100); //rect 34
 }
-
-function draw() {
-background(0);      
-    }
 
 function mousePressed() {
 if (mouseX > rect5X && mouseX < rect5X + rect5Width && mouseY > rect5Y && mouseY < rect5Y + rect5Height) {
@@ -147,4 +151,3 @@ fill(blackColor);
 rect(rect33X, rect33Y, rect33Width, rect33Height);
 }
 }
-
